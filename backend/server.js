@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 // Root API Status Endpoint
-app.get('/api', (req, res) => {
+app.get(['/', '/api'], (req, res) => {
   res.json({
     message: 'Welcome to AgriConnect API - Agriculture Awareness & Support Platform',
     status: 'Server operational',
